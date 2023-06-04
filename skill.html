@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+  <!-- Coding by CodingLab | www.codinglabweb.com -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 
+        crossorigin="anonymous">
+    </script>
+    <script src="./circularProgressBar.min.js"></script>
+    <link rel="stylesheet" href="progresscircle.css">
+
+    <!----===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <style media="screen">
+    
+body{
+    background-color:#191717;
+}
+.wrapper{
+    width: 40%;
+    /* min-width: 590px; */
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 52%;
+    top: 80%;
+    /* height: 100%; */
+}
+.container{
+  display: block;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 30px 30px 50px;
+  background-color: white;
+  border: 2px solid rgba(255,255,255,0.06);
+  border-radius: 10px;
+  box-shadow: 0 20px 30px rgba(0,0,0,0.2);
+  backdrop-filter: blur(10px);
+    
+} 
+.container *{
+    font-family: "Poppins",sans-serif;
+    color: black;
+    font-weight: 500;
+    
+}
+h2{
+    margin-bottom: 50px;
+    letter-spacing: 2px;
+    text-align: center;
+    font-size: 33px;
+    font-weight: bold;
+}
+.skills:not(:last-child){
+    margin-bottom: 30px;
+}
+.details{
+    width: 100%;
+    display: flex;  
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.bar{
+    position: relative;
+ 
+    border: 2px solid #0d96e0;
+ 
+    border-radius: 20px;
+  
+}
+.bar div{
+    position: relative;
+    width: 0;
+    height: 9px;
+    border-radius: 10px;
+    background-color: #0d96e0;
+   
+ 
+}
+#html-bar{
+    animation: html-fill 2s forwards;
+}
+@keyframes html-fill{
+    100%{
+        width: 90%;
+    }
+}
+#css-bar{
+    animation: css-fill 2s forwards;
+}
+@keyframes css-fill{
+    100%{
+        width: 75%;
+    }
+}
+#js-bar{
+    animation: js-fill 2s forwards;
+}
+@keyframes js-fill {
+    100%{
+        width: 72%;
+    }
+}
+#jQuery-bar{
+    animation: jQuery-fill 2s forwards;
+}
+@keyframes jQuery-fill{
+    100%{
+        width: 58%;
+    }
+}
+#python-bar{
+    animation: python-fill 2s forwards;
+}
+@keyframes python-fill{
+    100%{
+        width: 80%;
+    }
+}
+#mysql-bar{
+    animation: mysql-fill 2s forwards;
+}
+@keyframes mysql-fill{
+    100%{
+        width: 85%;
+    }
+}
+#c-bar{
+    animation: c-fill 2s forwards;
+}
+@keyframes c-fill{
+    100%{
+        width: 100%;
+    }
+}
+#g-bar{
+    animation: g-fill 2s forwards;
+} 
+@keyframes g-fill{
+    100%{
+        width: 75%;
+    }
+}
+#flask-bar{
+    animation: flask-fill 2s forwards;
+} 
+@keyframes flask-fill{
+    100%{
+        width: 60%;
+    }
+}
+#ml-bar{
+    animation: ml-fill 2s forwards;
+} 
+@keyframes ml-fill{
+    100%{
+        width: 85%;
+    }
+} 
+    </style>
+    <!--<title>Dashboard Sidebar Menu</title>--> 
+</head>
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="pic.jpg" alt="">
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name">Kapish Jain</span>
+                    <span class="profession">Web developer</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+
+                
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="index.html">
+                            <i class='bx bx-home icon'></i>
+                            <span class="nav-text">Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="about.html">
+                            <i class='bx bx-user-circle icon' ></i>
+                            <span class="nav-text">About</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="exper.html">
+                            <i class='bx bx-bulb icon' ></i>
+                            <span class="text nav-text">Experience</span>
+                        </a>
+                    </li>
+
+                    <li class="search-box">
+                        <a href="skill.html">
+                            <i class='bx bx-book-reader icon' style="color: black;"></i>
+                            <span class="nav-text1">Skills</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="proj.html">
+                            <i class='bx bx-pie-chart-alt icon' ></i>
+                            <span class="text nav-text">Projects</span>
+                        </a>
+                    </li>
+
+                    
+
+                    <li class="nav-link">
+                        <a href="contact.html">
+                            <i class='bx bxs-contact icon'></i>
+                            <span class="text nav-text">Contact</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="review.html">
+                            <i class='bx bx-heart icon' ></i>
+                            <span class="text nav-text">Review</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="bottom-content">
+                <li class="">
+                    <a href="https://www.linkedin.com/in/kapishj/"><i class='bx bxl-linkedin-square'></i></a>
+                    <a href="https://github.com/omjain1">
+                        <i class='bx bxl-github' ></i>
+                        <span class="text nav-text">GitHub</span>
+                    </a>
+                </li>
+            </div>
+        </div>
+        
+
+    </nav>
+    <h1 class="skill">My SkillSet</h1>
+    <div class="wrapper">
+      
+      <div class="container">
+          <div class="skills">
+              <div class="details">
+                  <span>Python</span>
+                  <span>80%</span>
+              </div>
+              <div class="bar">
+                  <div id="python-bar"></div>
+              </div>
+          </div>
+          <div class="skills">
+              <div class="details">
+                  <span>MySQL</span>
+                  <span>85%</span>
+              </div>
+              <div class="bar">
+                  <div id="mysql-bar"></div>
+              </div>
+          </div>
+          <div class="skills">
+              <div class="details">
+                  <span>C</span>
+                  <span>100%</span>
+              </div>
+              <div class="bar">
+                  <div id="c-bar"></div>
+              </div>
+          </div>
+          <div class="skills">
+            <div class="details">
+                <span>HTML</span>
+                <span>90%</span>
+            </div>
+            <div class="bar">
+                <div id="html-bar"></div>
+            </div>
+        </div>
+        <div class="skills">
+            <div class="details">
+                <span>CSS</span>
+                <span>75%</span>
+            </div>
+            <div class="bar">
+                <div id="css-bar"></div>
+            </div>
+        </div>
+        <div class="skills">
+            <div class="details">
+                <span>Javascript</span>
+                <span>72%</span>
+            </div>
+            <div class="bar">
+                <div id="js-bar"></div>
+            </div>
+        </div>
+        <div class="skills">
+            <div class="details">
+                <span>jQuery</span>
+                <span>68%</span>
+            </div>
+            <div class="bar">
+                <div id="jQuery-bar"></div>
+            </div>
+        </div>
+        <div class="skills">
+          <div class="details">
+              <span>Flask</span>
+              <span>68%</span>
+          </div>
+          <div class="bar">
+              <div id="flask-bar"></div>
+          </div>
+      </div>
+      <div class="skills">
+        <div class="details">
+            <span>GIT & GITHUB</span>
+            <span>75%</span>
+        </div>
+        <div class="bar">
+            <div id="g-bar"></div>
+        </div>
+    </div>
+    <div class="skills">
+      <div class="details">
+          <span>ML</span>
+          <span>80%</span>
+      </div>
+      <div class="bar">
+          <div id="ml-bar"></div>
+      </div>
+    
+  </div>
+          </div>
+      </div>
+  </div>
+    <script>
+    
+        const body = document.querySelector('body'),
+        sidebar = body.querySelector('nav'),
+        toggle = body.querySelector(".toggle"),
+        searchBtn = body.querySelector(".search-box"),
+        modeSwitch = body.querySelector(".toggle-switch"),
+        modeText = body.querySelector(".mode-text"),
+        text1 = document.getElementById('left'),
+        text = document.getElementsByClassName('text')[7];
+
+
+        toggle.addEventListener("click" , () =>{
+        
+        sidebar.classList.toggle("close");
+        if (sidebar.classList.contains("close")) {
+            text1.style.marginLeft = "670px";
+            text.style.marginLeft = "590px";
+        } 
+        else {
+        // Reset the margin-left to its default value when sidebar is open
+            text1.style.marginLeft = "530px";
+            text.style.marginLeft = "470px";
+            
+    }
+
+    });
+
+    searchBtn.addEventListener("click" , () =>{
+        sidebar.classList.remove("close");
+        
+    });
+    document.addEventListener('DOMContentLoaded', function() {
+    document.documentElement.classList.add('disable-select');
+    });
+
+    </script>
+
+</body>
+</html>

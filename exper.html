@@ -1,0 +1,190 @@
+/<!DOCTYPE html>
+  <!-- Coding by CodingLab | www.codinglabweb.com -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!----===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    
+    <!--<title>Dashboard Sidebar Menu</title>--> 
+</head>
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="pic.jpg" alt="">
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name">Kapish Jain</span>
+                    <span class="profession">Web developer</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+
+                
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="index.html">
+                            <i class='bx bx-home icon'></i>
+                            <span class="text nav-text">Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="about.html">
+                            <i class='bx bx-user-circle icon' ></i>
+                            <span class="text nav-text">About</span>
+                        </a>
+                    </li>
+
+                    <li class="search-box">
+                        <a href="exper.html">
+                            <i class='bx bx-bulb icon' style="color: black;"></i>
+                            <span class="nav-text1">Experience</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="skill.html">
+                            <i class='bx bx-book-reader icon' ></i>
+                            <span class="text nav-text">Skills</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="proj.html">
+                            <i class='bx bx-pie-chart-alt icon' ></i>
+                            <span class="text nav-text">Projects</span>
+                        </a>
+                    </li>
+
+                    
+
+                    <li class="nav-link">
+                        <a href="contact.html">
+                            <i class='bx bxs-contact icon'></i>
+                            <span class="text nav-text">Contact</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="review.html">
+                            <i class='bx bx-heart icon' ></i>
+                            <span class="text nav-text">Review</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="bottom-content">
+                <li class="">
+                    <a href="https://www.linkedin.com/in/kapishj/"><i class='bx bxl-linkedin-square'></i></a>
+                    <a href="https://github.com/omjain1">
+                        <i class='bx bxl-github' ></i>
+                        <span class="text nav-text">GitHub</span>
+                    </a>
+                </li>
+            </div>
+            
+    </div>
+        
+
+    </nav>
+
+    <div class="home timeline">
+        
+        <h1 class="heading">Education and Experience</h1>
+        <div class="container">
+            <div class="vertical-line"></div>
+          </div>
+          
+
+        <div class="card">
+            <div class="line1"></div>
+            <div class="card-body">
+                <div class="card-title"><b>2020-2021</b></div>
+                <p class="card-detail">I completed my 12th CBSE Boards in the stream of PCM + Computer Science + Economics. I achived 97% in my board examinations. </p>
+            </div>
+        </div>
+        <div class="card">
+            <div class=" line2"></div>
+            <div class="card-body">
+                <div class="card-title"><b>Sept - 2021</b></div>
+                <p class="card-detail">I pursued Btech(Hons) CSE in specialization in AI & ML at <b>Manipal University Jaipur</b> and has a <b>CGPA of 9.52 </b>(Till 3rd sem).</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="line1"></div>
+            <div class="card-body">
+                <div class="card-title"><b>March 2023</b></div>
+                <p class="card-detail"><b>Community Leader at Humble Brat</b><br>I handled B2B and D2C, also participated in various campaings to increase the reach of Humble Brat. Also learned to manage social media campaing.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class=" line2"></div>
+            <div class="card-body">
+                <div class="card-title"><b>April - 2023</b></div>
+                <p class="card-detail"><b>Campus Ambassadar: Internshala</b><br> I was selected as campus ambassadar at internshala and my role was to promote Internshala Trainings at my Campus.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="line1"></div>
+            <div class="card-body">
+                <div class="card-title"><b>May 2023 - August 2023<b></div>
+                <p class="card-detail"><b>AI Intern: Intel</b><br> My job was to provide to the needs of customers by designing the appropriate AI models. Also, my work included dataset creation, modification and pruning.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const body = document.querySelector('body'),
+      sidebar = body.querySelector('nav'),
+      toggle = body.querySelector(".toggle"),
+      searchBtn = body.querySelector(".search-box"),
+      modeSwitch = body.querySelector(".toggle-switch"),
+      modeText = body.querySelector(".mode-text"),
+      text1 = document.getElementById('left');
+      const line1p = document.getElementsByClassName('line1');
+      const line2 = document.getElementsByClassName('line2');
+
+toggle.addEventListener("click", () => {
+  sidebar.classList.toggle("close");
+
+  if (sidebar.classList.contains("close")) {
+    for (let i = 0; i < line1p.length; i++) {
+      line1p[i].style.left = "450px";
+      line2[i].style.right = "450px";
+    }
+  } else {
+    for (let i = 0; i < line1p.length; i++) {
+      line1p[i].style.left = "390px";
+      line2[i].style.right = "390px";
+    }
+  }
+});
+
+
+searchBtn.addEventListener("click" , () =>{
+    sidebar.classList.remove("close");
+    
+});
+document.addEventListener('DOMContentLoaded', function() {
+  document.documentElement.classList.add('disable-select');
+});
+
+    </script>
+
+</body>
+</html>

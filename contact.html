@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+  <!-- Coding by CodingLab | www.codinglabweb.com -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="text.css">
+    
+    <!----===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:200,400,800' rel='stylesheet' type='text/css'><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    
+<link rel='stylesheet' href='https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/css/demo.css'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+
+    <!--<title>Dashboard Sidebar Menu</title>--> 
+</head>
+
+<body style="background-color: rgb(22, 22, 22);">
+    
+
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="pic.jpg" alt="">
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name">Kapish Jain</span>
+                    <span class="profession">Web developer</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+
+                
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="index.html">
+                            <i class='bx bx-home icon'></i>
+                            <span class="nav-text">Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="about.html">
+                            <i class='bx bx-user-circle icon' ></i>
+                            <span class="nav-text">About</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="exper.html">
+                            <i class='bx bx-bulb icon' ></i>
+                            <span class="text nav-text">Experience</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="skill.html">
+                            <i class='bx bx-book-reader icon' ></i>
+                            <span class="text nav-text">Skills</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="proj.html">
+                            <i class='bx bx-pie-chart-alt icon' ></i>
+                            <span class="nav-text">Projects</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link search-box">
+                        <a href="contact.html">
+                            <i class='bx bxs-contact icon' style="color: black;"></i>
+                            <span class=" nav-text1">Contact</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="review.html">
+                            <i class='bx bx-heart icon' ></i>
+                            <span class="text nav-text">Review</span>
+                        </a>
+                    </li>
+
+                    
+
+                </ul>
+            </div>
+            <div class="bottom-content">
+                <li class="">
+                    <a href="https://www.linkedin.com/in/kapishj/"><i class='bx bxl-linkedin-square'></i></a>
+                    <a href="https://github.com/omjain1">
+                        <i class='bx bxl-github' ></i>
+                        <span class="text nav-text">GitHub</span>
+                    </a>
+                </li>
+            </div>
+    </nav>
+        
+        <h1 class="head1">Connect With Me</h1>
+        <canvas id="demo-canvas"></canvas>
+        <article class="profile">
+            
+            <div class="profile-image">
+                <img src="pic.png" />
+            </div>
+            <h2 class="profile-username">Kapish Jain</h2>
+            <small class="profile-user-handle">@not.kapish</small>
+            <div class="profile-actions">
+                <button class="btn btn--primary">Follow</button>
+                <button class="btn btn--icon">
+                    <i class="ph-export"></i>
+                </button>
+                <button class="btn btn--icon">
+                    <i class="ph-dots-three-outline-fill"></i>
+                </button>
+            </div>
+            <div class="profile-links">
+                <a href="https://www.linkedin.com/in/kapishj/" class="link link--icon">
+                    <i class="ph ph-linkedin-logo"></i>
+                </a>
+                <a href="https://github.com/omjain1" class="link link--icon">
+                    <i class="ph ph-github-logo"></i>
+                </a>
+                <a href="https://instagram.com/not.kapish?igshid=ZGUzMzM3NWJiOQ==" class="link link--icon">
+                    <i class="ph-instagram-logo"></i>
+                </a>
+            </div>
+        </article>
+    
+        
+
+         
+    <script src='https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/EasePack.min.js'></script>
+    <script src='https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/rAF.js'></script>
+    <script src='https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/TweenLite.min.js'></script><script src='https://unpkg.com/phosphor-icons'></script><script  src="script.js"></script>
+    <script>
+        
+        const body = document.querySelector('body'),
+        sidebar = body.querySelector('nav'),
+        toggle = body.querySelector(".toggle"),
+        searchBtn = body.querySelector(".search-box"),
+        modeSwitch = body.querySelector(".toggle-switch"),
+        modeText = body.querySelector(".mode-text"),
+        text1 = document.getElementById('left'),
+        text = document.getElementsByClassName('text')[7];
+
+
+        toggle.addEventListener("click" , () =>{
+            
+            sidebar.classList.toggle("close");
+            
+
+        });
+
+        searchBtn.addEventListener("click" , () =>{
+            sidebar.classList.remove("close");
+            
+        });
+        document.addEventListener('DOMContentLoaded', function() {
+        document.documentElement.classList.add('disable-select');
+        });
+        
+
+
+
+        (function() {
+    var width, height, canvas, ctx, points, target, animateHeader = true;
+
+    // Main
+    initHeader();
+    initAnimation();
+    addListeners();
+
+    function initHeader() {
+        width = window.innerWidth;
+        height = window.innerHeight;
+        target = {x: width/2, y: height/2};
+
+        canvas = document.getElementById('demo-canvas');
+        canvas.width = width;
+        canvas.height = height;
+        ctx = canvas.getContext('2d');
+
+        // create points
+        points = [];
+        for(var x = 0; x < width; x = x + width/20) {
+            for(var y = 0; y < height; y = y + height/20) {
+                var px = x + Math.random()*width/20;
+                var py = y + Math.random()*height/20;
+                var p = {x: px, originX: px, y: py, originY: py };
+                points.push(p);
+            }
+        }
+
+        // for each point find the 5 closest points
+        for(var i = 0; i < points.length; i++) {
+            var closest = [];
+            var p1 = points[i];
+            for(var j = 0; j < points.length; j++) {
+                var p2 = points[j]
+                if(!(p1 == p2)) {
+                    var placed = false;
+                    for(var k = 0; k < 5; k++) {
+                        if(!placed) {
+                            if(closest[k] == undefined) {
+                                closest[k] = p2;
+                                placed = true;
+                            }
+                        }
+                    }
+
+                    for(var k = 0; k < 5; k++) {
+                        if(!placed) {
+                            if(getDistance(p1, p2) < getDistance(p1, closest[k])) {
+                                closest[k] = p2;
+                                placed = true;
+                            }
+                        }
+                    }
+                }
+            }
+            p1.closest = closest;
+        }
+
+        // assign a circle to each point
+        for(var i in points) {
+            var c = new Circle(points[i], 2+Math.random()*2, 'rgba(255,255,255,0.3)');
+            points[i].circle = c;
+        }
+    }
+
+    // Event handling
+    function addListeners() {
+        if(!('ontouchstart' in window)) {
+            window.addEventListener('mousemove', mouseMove);
+        }
+        window.addEventListener('scroll', scrollCheck);
+        window.addEventListener('resize', resize);
+    }
+
+    function mouseMove(e) {
+        var posx = posy = 0;
+        if (e.pageX || e.pageY) {
+            posx = e.pageX;
+            posy = e.pageY;
+        }
+        else if (e.clientX || e.clientY)    {
+            posx = e.clientX + document.body.scrollLeft + document.documentElement.scrollLeft;
+            posy = e.clientY + document.body.scrollTop + document.documentElement.scrollTop;
+        }
+        target.x = posx;
+        target.y = posy;
+    }
+
+    function scrollCheck() {
+        if(document.body.scrollTop > height) animateHeader = false;
+        else animateHeader = true;
+    }
+
+    function resize() {
+        width = window.innerWidth;
+        height = window.innerHeight;
+        canvas.width = width;
+        canvas.height = height;
+    }
+
+    // animation
+    function initAnimation() {
+        animate();
+        for(var i in points) {
+            shiftPoint(points[i]);
+        }
+    }
+
+    function animate() {
+        if(animateHeader) {
+            ctx.clearRect(0,0,width,height);
+            for(var i in points) {
+                // detect points in range
+                if(Math.abs(getDistance(target, points[i])) < 4000) {
+                    points[i].active = 0.3;
+                    points[i].circle.active = 0.6;
+                } else if(Math.abs(getDistance(target, points[i])) < 20000) {
+                    points[i].active = 0.1;
+                    points[i].circle.active = 0.3;
+                } else if(Math.abs(getDistance(target, points[i])) < 40000) {
+                    points[i].active = 0.02;
+                    points[i].circle.active = 0.1;
+                } else {
+                    points[i].active = 0;
+                    points[i].circle.active = 0;
+                }
+
+                drawLines(points[i]);
+                points[i].circle.draw();
+            }
+        }
+        requestAnimationFrame(animate);
+    }
+
+    function shiftPoint(p) {
+        TweenLite.to(p, 1+1*Math.random(), {x:p.originX-50+Math.random()*100,
+            y: p.originY-50+Math.random()*100, ease:Circ.easeInOut,
+            onComplete: function() {
+                shiftPoint(p);
+            }});
+    }
+
+    // Canvas manipulation
+    function drawLines(p) {
+        if(!p.active) return;
+        for(var i in p.closest) {
+            ctx.beginPath();
+            ctx.moveTo(p.x, p.y);
+            ctx.lineTo(p.closest[i].x, p.closest[i].y);
+            ctx.strokeStyle = 'rgba(156,217,249,'+ p.active+')';
+            ctx.stroke();
+        }
+    }
+
+    function Circle(pos,rad,color) {
+        var _this = this;
+
+        // constructor
+        (function() {
+            _this.pos = pos || null;
+            _this.radius = rad || null;
+            _this.color = color || null;
+        })();
+
+        this.draw = function() {
+            if(!_this.active) return;
+            ctx.beginPath();
+            ctx.arc(_this.pos.x, _this.pos.y, _this.radius, 0, 2 * Math.PI, false);
+            ctx.fillStyle = 'rgb(153, 10, 248,'+ _this.active+')';
+            ctx.fill();
+        };
+    }
+
+    // Util
+    function getDistance(p1, p2) {
+        return Math.pow(p1.x - p2.x, 2) + Math.pow(p1.y - p2.y, 2);
+    }
+
+})();
+   </script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="pic.jpg" alt="">
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name">Kapish Jain</span>
+                    <span class="profession">Web developer</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">  
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="index.html">
+                            <i class='bx bx-home-circle icon'></i>
+                            <span class="nav-text">Home</span>
+                        </a>
+                    </li>
+                    <li class="search-box ">
+                        <a href="about.html">
+                            <i class='bx bx-user-circle icon' style="color: black;"></i>
+                            <span class="nav-text1">About</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="exper.html">
+                            <i class='bx bx-bulb icon' ></i>
+                            <span class="text nav-text">Experience</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="skill.html">
+                            <i class='bx bx-book-reader icon' ></i>
+                            <span class="text nav-text">Skills</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="proj.html">
+                            <i class='bx bx-pie-chart-alt icon' ></i>
+                            <span class="text nav-text">Projects</span>
+                        </a>
+                    </li>
+
+                    
+
+                    <li class="nav-link">
+                        <a href="contact.html">
+                            <i class='bx bxs-contact icon'></i>
+                            <span class="text nav-text">Contact</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="review.html">
+                            <i class='bx bx-heart icon' ></i>
+                            <span class="text nav-text">Review</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="bottom-content">
+                <li class="">
+                    <a href="https://www.linkedin.com/in/kapishj/"><i class='bx bxl-linkedin-square'></i></a>
+                    <a href="https://github.com/omjain1">
+                        <i class='bx bxl-github' ></i>
+                        <span class="text nav-text">GitHub</span>
+                    </a>
+                </li>
+            </div>
+        </div>
+        
+
+
+    </nav>
+    
+    <section class="home1">
+        <div class="contain">
+            <span id="aboutme">About Me</span>
+            <div class="text3">
+                <div class="message">
+                    <div class="word1">Bonjour!</div>
+                    <div class="word2">Ciao!</div>
+                    <div class="word3">Namaste!</div>
+                    <div class="word4">Hola!</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="profile-pic">
+            <img src="pic.png">
+        </div>
+        <div class="text1" style="opacity: 1;">I'm Kapish Jain, a highly motivated computer science student with a strong programming background. I enjoy solving challenging problems and coming up<br> with creative solutions. Additionally, I have a great interest in photography and <br>photo editing, which allows me to showcase my artistic side by capturing captivating visuals. I am always looking to learn and grow in both fields.</div>
+    </section>
+
+    <script>
+        const body = document.querySelector('body'),
+      sidebar = body.querySelector('nav'),
+      toggle = body.querySelector(".toggle"),
+      searchBtn = body.querySelector(".search-box"),
+      modeSwitch = body.querySelector(".toggle-switch"),
+      modeText = body.querySelector(".mode-text");
+
+
+toggle.addEventListener("click" , () =>{
+    sidebar.classList.toggle("close");
+})
+
+searchBtn.addEventListener("click" , () =>{
+    sidebar.classList.remove("close");
+})
+
+modeSwitch.addEventListener("click" , () =>{
+    body.classList.toggle("dark");
+    
+    if(body.classList.contains("dark")){
+        modeText.innerText = "Light mode";
+    }else{
+        modeText.innerText = "Dark mode";
+        
+    }
+});
+document.addEventListener('DOMContentLoaded', function() {
+  document.documentElement.classList.add('disable-select');
+});
+    </script>
+
+</body>
+</html>
